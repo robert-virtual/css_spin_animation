@@ -1,0 +1,112 @@
+*{
+  font-family: sans-serif;
+}
+:root{
+  --spin-play-state: running;
+}
+body{
+  overflow-x: hidden;
+}
+.spiner{
+  position: relative;
+  left: 25%;
+  border: solid 1px gray;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  animation: spin 8s linear infinite;
+  animation-play-state: var(--spin-play-state,running);
+}
+img{
+  width: 7rem;
+  border-radius: 0.5rem;
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.spiner li {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0.25rem;
+  list-style: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: white;
+  margin: 1rem;
+  animation: pulse 3s infinite;
+}
+.spiner li p {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.spiner li i {
+  font-size:1.5rem ;
+  transition: all 0.5s;
+}
+.spiner:hover {
+  --spin-play-state: paused;
+}
+.spiner li:hover {
+  --spin-play-state: paused;
+}
+.spiner li:hover > p{
+  opacity: 1;
+}
+
+.spiner li:hover > i {
+  opacity: 0;
+}
+
+
+
+.blue{
+  background-color: #0abde3;
+}
+
+.jadedust{
+  background-color: #00d2d3;
+}
+.doubledragon{
+  background-color: #ff9f43;
+}
+.lotuspink{
+  background-color: #f368e0;
+}
+.amour{
+  background-color: #ee5253;
+}
+.purple{
+  background-color: #5f27cd;
+}
+.green{
+  background-color: #1dd1a1;
+}
+.electronblue{
+  background-color:#0984e3; 
+}
+.sorbet{
+  background-color: #ffaf40;
+}
